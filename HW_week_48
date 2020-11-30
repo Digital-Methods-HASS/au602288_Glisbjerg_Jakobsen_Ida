@@ -1,0 +1,61 @@
+install.packages("gganimate")
+install.packages("gapminder")
+install.packages("gifski")
+install.packages("av")
+install.packages("knitr")
+
+
+library(tidyverse)
+library(gganimate)
+library(gapminder)
+library(av)
+library(gifski)
+library(knitr)
+
+unique(gapminder$year)
+head(gapminder)
+
+theme_set(theme_bw())
+ggplot(subset(gapminder, year == 1952), aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point() +
+  scale_x_log10()
+
+subset(gapminder, year == 1952)%>% 
+  group_by(country,gdpPercap) %>% 
+  summarize(min_gdpPercap=min(gdpPercap),
+            max_gdpPercap=max(gdpPercap)) %>%
+  arrange(desc(max_gdpPercap))
+
+ggplot(subset(gapminder, year == 2007), aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point() +
+  scale_x_log10()
+
+subset(gapminder, year == 2007)%>% 
+    group_by(country,gdpPercap) %>% 
+    summarize(min_gdpPercap=min(gdpPercap),
+              max_gdpPercap=max(gdpPercap)) %>%
+      arrange(desc(max_gdpPercap))
+
+ggplot(subset(gapminder, year == 2007), aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point(alpha = 0.5, aes(color = continent)) +
+  scale_x_log10()
+
+anim2 <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point() +
+  scale_x_log10() + 
+  transition_time(year)
+
+anim2 <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point() +
+  scale_x_log10() + # convert x to log scale
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')                  
+
+anim2 <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop)) +
+  geom_point() +
+  scale_x_log10() + # convert x to log scale
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+options(scipen = 999)
