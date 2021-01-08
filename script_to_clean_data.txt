@@ -775,5 +775,95 @@
       }
     ],
     "description": "Mass edit cells in column hovederhverv 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Brændevinsbrænder",
+          "Brændevinsbrænderi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brændevinsbrænder"
+      },
+      {
+        "from": [
+          "Tømmermester",
+          "Tømrermester"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tømmermester"
+      },
+      {
+        "from": [
+          "Brygger",
+          "Bryggeri"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brygger"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Avlsbrug",
+          "Avlsbruger"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Avlsbrug"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glashandel",
+          "Glashandler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glashandel"
+      },
+      {
+        "from": [
+          "Hestehandler",
+          "Hestehandel"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hestehandler"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv 1"
   }
 ]
