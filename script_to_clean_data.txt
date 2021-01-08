@@ -1,0 +1,746 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column alder"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "grel:value.replace(\"]\",\"\").replace(\"[\",\"\").replace(\"-\",\"NA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column oprindelsessted using expression grel:value.replace(\"]\",\"\").replace(\"[\",\"\").replace(\"-\",\"NA\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "??"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fornavn",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column fornavn"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fornavn",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column fornavn"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "efternavn",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column efternavn"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "land",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column land"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "land",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "??"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column land"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "land",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "[Tyskland]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tyskland"
+      }
+    ],
+    "description": "Mass edit cells in column land"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Skipper, købmand",
+          "Skipper, Købmand",
+          "Købmand, skipper",
+          "Købmand, Skipper"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Skipper, Købmand"
+      },
+      {
+        "from": [
+          "Købmand, Værtshusholder",
+          "Værtshusholder, købmand"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Købmand, Værtshusholder"
+      },
+      {
+        "from": [
+          "Bog og papirhandler",
+          "Bog- og papirhandler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Boghandler, papirhandler"
+      },
+      {
+        "from": [
+          "Avlsmand, gadekører",
+          "Gadekører, avlsmand"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Avlsmand, Gadekører"
+      },
+      {
+        "from": [
+          "Marketender og høker",
+          "Høker og marketender"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Marketender, Høker"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sukkerraffinader",
+          "Sukkerraffinadeur"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sukkerraffinader"
+      },
+      {
+        "from": [
+          "Høker, småhandel",
+          "Høker, småhandler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Høker, småhandel"
+      },
+      {
+        "from": [
+          "Klejnsmedemester",
+          "Kleinsmedemester"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kleinsmedemester"
+      },
+      {
+        "from": [
+          "Trådhandler",
+          "Trådhandeler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Trådhandler"
+      },
+      {
+        "from": [
+          "Brygning, brænderi",
+          "Brygning, brænderi, småhu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brygning, brænderi"
+      },
+      {
+        "from": [
+          "Klejnsmed",
+          "Kleinsmed"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kleinsmed"
+      },
+      {
+        "from": [
+          "Købmand en detail",
+          "Købmand en detaile"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Købmand en detail"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gibser",
+          "Gipser"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gipser"
+      },
+      {
+        "from": [
+          "Kaffeskjænker",
+          "Kaffeskænker"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kaffeskænker"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Næringsbevilling",
+          "Næringsbevilling. [Kobber"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Næringsbevilling"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tømrermester",
+          "Tømmermester"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tømmermester"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "folie",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column folie using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "noter",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column noter"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "[-]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hovederhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Handel m. brød, tråd, gar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handel med brød, tråd, gar"
+      }
+    ],
+    "description": "Mass edit cells in column hovederhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sverige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Flensborg, Slesvig"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Flensborg"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Kristianstad, Sverige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kristianstad"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lund, Sverige"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lund"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Norge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Petersb??"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Stavanger, Norge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stavanger"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Storaker, Norge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Storaker"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Straumøy, Norge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Straumøy"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Stralsund, Forpommern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stralsund"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "oprindelsessted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Stralsund, Pommern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stralsund"
+      }
+    ],
+    "description": "Mass edit cells in column oprindelsessted"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "borgerskabsdato",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column borgerskabsdato using expression value.toDate()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "borgerskabsdato",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "NA"
+      }
+    ],
+    "description": "Mass edit cells in column borgerskabsdato"
+  }
+]
